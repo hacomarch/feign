@@ -22,4 +22,7 @@ public interface DemoFeignClient {
     @PostMapping("/post") //-> http://localhost:8080/target_server/post
     ResponseEntity<BaseResponseInfo> callPost(@RequestHeader("CustomHeaderName") String customHeader,
                                               @RequestBody BaseRequestInfo baseRequestInfo);
+
+    @GetMapping("/error")
+    ResponseEntity<BaseResponseInfo> callErrorDecoder();
 }
